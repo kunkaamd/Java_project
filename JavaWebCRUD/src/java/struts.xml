@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="upload" class="com.controller.ReadSQL">
+            <result name="success">step2.jsp</result>
+            <result name="error">error.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+        <action name="generator" class="com.controller.WriteFile">
+            <result name="success">download.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    </package>
+</struts>

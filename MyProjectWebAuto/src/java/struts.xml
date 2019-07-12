@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: LOC -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="mypackage" extends="struts-default" namespace="/">
+        <action name="write" method="execute" class="com.Controller.MainController">
+            <result name="success">success.jsp</result>
+            <result name="fail">errors.jsp</result>
+        </action>
+    </package>
+</struts>

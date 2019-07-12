@@ -1,0 +1,23 @@
+﻿*,html{border:medium none;margin:0;padding:0;font-family:"Roboto Slab",Tahoma,Geneva,sans-serif!important}body{font-family:"Roboto Slab",Tahoma,Geneva,sans-serif;font-size:14px;color:#666;background:#fff;line-height:18px}a{text-decoration:none;color:green}.clear{clear:both}.clearfix{clear:both}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+input[type=text],input[type=password]{border:1px #dcdcdc solid;color:#595959;margin:0;padding:1px 1px}input[disabled]
+ul,ol{list-style:none}
+.pcontainer{height:100%;width:1000px;margin:0 auto}
+.caret{display:inline-block;width:0;height:0;margin-left:10px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.dropdown{position:relative}.dropdown .dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;font-size:14px;list-style:none;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;box-shadow:0 6px 12px rgba(0,0,0,.175)}.dropdown:hover .dropdown-menu{display:block!important}.dropdown .dropdown-menu li a{display:block;padding:3px 20px;clear:both;font-weight:normal;color:#333;white-space:nowrap;text-align:left}.dropdown .dropdown-menu li a:hover{color:#262626;text-decoration:none;background-color:#f5f5f5}
+#pheader{display:block;padding-top:30px;width:100%;height:40px;white-space:nowrap}
+#pheader .logo{display:block;float:left;width:100px;height:100%;padding-right:50px}
+#pheader .logo a{width:100%;height:100%;display:block;overflow:hidden;background:transparent url(hinh/logo.png) no-repeat left center;text-indent:-999em}
+#pheader .form-search{display:block;float:left;width:350px;position:relative}
+#pheader .form-search .key-search{border-radius:4px;border:1px solid #3d8811;height:23px;color:#9f9f9f;font-size:12px;display:block;width:325px;padding:6px 12px}#pheader .form-search .btn-search{position:absolute;top:0;right:0;background:#3d8811;width:40px;height:37px;border:medium none;border-radius:0 4px 4px 0;cursor:pointer;display:block}
+#pheader .form-search .icon-search{background:url(hinh/search.png) no-repeat top left;display:block;width:40px;height:37px;padding:0}
+#pheader .header-phone{float:left;width:130px;color:#aa1515;font-size:18px;font-weight:bold;line-height:37px;text-align:center;display:block;padding:0 10px 0 30px}
+#pheader .header-phone .phone{background:url(hinh/phone.png) no-repeat center left;padding-left:50px;height:40px}
+#pheader .account{float:right;display:block;width:295px;position:relative;z-index:1000}
+#pheader .account .accountInner{border:1px solid #e6eae6;border-radius:4px;height:35px;position:relative}
+#pheader .account .accountInner a{color:#333}
+#pheader .account .accountInner a.active{color:#00a200}
+#pheader .account .accountInner .dropdown{float:left;width:145px;padding:9px 5px;border-right:1px solid #e6eae6;position:relative}
+#pheader .account .accountInner .dropdown .icon-user{background:url(hinh/user.png) no-repeat center right;margin-right:8px;margin-left:8px;width:17px;height:17px;float:left}
+#pheader .account .accountInner .dropdown .icon-user-on{background:url(hinh/account.png) no-repeat center right}
+#pheader .account .accountInner .shoppingCart{float:left;padding-top:9px;padding-left:10px}
+#pheader .account .accountInner .shoppingCart .icon-shopping{background:url(hinh/shopping.png) no-repeat center right;margin-right:8px;margin-left:8px;width:19px;height:17px;float:left}
+#pheader .account .accountInner .shoppingCart strong{margin-left:6px}

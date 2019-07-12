@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TODO supply a title</title>
+        <!--------------angularjs------>
+        <script src="lib/angularJS/angular.min.js" type="text/javascript"></script>
+        <script src="lib/angularJS/angular-sanitize.min.js" type="text/javascript"></script>
+        <!--------------Jquery------>
+        <script src="lib/js/jquery-1.12.2.min.js" type="text/javascript"></script>
+        
+        <!--------------bootstrap------>
+        
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        <!--------------awesome------>
+        <link href="lib/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!--------------semantic ui------>
+        
+        <link href="lib/css/semantic.min.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/js/semantic.min.js" type="text/javascript"></script>
+        <!--------------css------>
+        <link href="lib/css/mycss-home.css" rel="stylesheet" type="text/css"/>
+        
+        <!----------------close-------->
+        <style> 
+        </style>
+    </head>
+    <body>
+<!-- NAV -->
+        <nav class="navbar navbar-inverse navbar-fixed-top animate">
+            <div class="container navbar-more visible-xs">
+                    <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                    <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                                    <button class="btn btn-default" type="submit">Submit</button>
+                                            </span>
+                                    </div>
+                            </div>
+                    </form>
+                    <ul class="nav navbar-nav">
+                            <li>
+                                    <a href="#">
+                                            <span class="menu-icon fa fa-bell-o"></span>
+                                            Reservations
+                                    </a>
+                            </li>
+                            <li>
+                                    <a href="#">
+                                            <span class="menu-icon fa fa-picture-o"></span>
+                                            Photos
+                                    </a>
+                            </li>
+                            <li class="dropdown" style="background-color: #101010;">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Trang cá nhân<span></span></a></li>
+                                    <li><a href="#">Cập nhật thông tin</a></li>
+                                    <li><a href="#">Cài đặt riêng tư</a></li>
+                                    <li><a href="#">Thay đổi mật khẩu</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Admin <span class="glyphicon glyphicon-cog"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Log Out <span class="glyphicon glyphicon-log-out"></span></a></li>
+                                </ul>
+                            </li>
+                    </ul>
+            </div>
+            <div class="container">
+                    <div class="navbar-header hidden-xs">
+                            <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right mobile-bar">
+                            <li>
+                                    <a href="#">
+                                            <span class="menu-icon fa fa-home"></span>
+                                            Home
+                                    </a>
+                            </li>
+                            <li>
+                                    <a href="#">
+                                            <span class="menu-icon fa fa-info"></span>
+                                            <span class="hidden-xs">About the Boat</span>
+                                            <span class="visible-xs">About</span>
+                                    </a>
+                            </li>
+                            <li class="hidden-xs">
+                                <a href="#" id="my-login" onclick="openModal()">
+                                            Login <span class="glyphicon glyphicon-log-in"></span>
+                                    </a>
+                            </li>
+                            <li class="visible-xs" onclick="openModal()">
+                                    <a href="#" id="my-login">
+                                            <span class="menu-icon fa fa-picture-o"></span>
+                                            Login
+                                    </a>
+                            </li>
+                            
+                            <li class="visible-sm">
+                                    <a href="#">
+                                            <span class="menu-icon fa fa-bell-o"></span>
+                                            Reservations 
+                                    </a>
+                            </li>
+                            
+                            <li class="visible-xs">
+                                    <a href="#navbar-more-show">
+                                            <span class="menu-icon fa fa-bars"></span>
+                                            More
+                                    </a>
+                            </li>
+                            <li>
+                                <a href="#" class="hidden-xs">
+                                        <span class="menu-icon fa fa-phone"></span>						
+                                        <span class="hidden-xs">Contact Us</span>
+                                        <span class="visible-xs">Contact</span>
+                                </a>
+                            </li>
+                            <li class="dropdown hidden-xs">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>Username <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Trang cá nhân<span></span></a></li>
+                                    <li><a href="#">Cập nhật thông tin</a></li>
+                                    <li><a href="#">Cài đặt riêng tư</a></li>
+                                    <li><a href="#">Thay đổi mật khẩu</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-cog"></span>      Admin</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>      Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li class="visible-lg visible-md visible-sm">
+                                <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a>
+                            </li>
+                    </ul>
+                <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse3">
+                    <form class="navbar-form navbar-right" role="search" id="my-nav-search-right" action="google.com" method="get">
+                        <div class="ui search">
+                            <div class="ui icon input">
+                            <input class="prompt" placeholder="Search countries..." type="text">
+                            <i class="search icon"></i>
+                            </div>
+                            <button type="submit" hidden></button>
+                            <div class="results"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+	</nav>
+        
+<!-- HEADER -->
+        <header style="margin-top: -23px;">
+            <div class="st-banner">
+            <div class="container">
+               <div class="row center middle">
+                  <div class="col-md-12">
+                        <h1 style="top:-10px; color:white; font-size:1.7em; text-shadow:none;"><img src="lib/images/slide-title-border.png" alt="" style="width:37px; height:10px; position:relative; top:-2px;">&nbsp;&nbsp; Enjoy theory and lab at the same time, right here online &nbsp;&nbsp;<img src="lib/images/slide-title-border.png" alt="" style="width:37px; height:10px; position:relative; top:-2px;"></h1>
+
+                      <form method="get" class="searchform" name="searchform" action="http://www.google.com/search" target="_blank">
+                         <input name="sitesearch" value="www.tutorialspoint.com" type="hidden">
+                        <input autocomplete="off" class="form-controls search" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" type="text">
+                        <input value="FORID:11" name="cof" type="hidden">
+                        <input name="ie" value="ISO-8859-1" type="hidden">
+                        <button class="search-butn" type="submit">Search</button>
+                     </form>
+
+                        <div style="margin-top:20px;">
+
+                           <span class="srch-icon"><a href="#" title="Google Maps Tutorial"><img src="lib/images/google.png"></a></span>
+                           <span class="srch-icon"><a href="#" title="Data Structure &amp; Algorithms Tutorial"><img src="lib/images/facebook.png" alt="Data Structure &amp; Algorithms Tutorial"></a></span>
+                           <span class="srch-icon"><a href="#" title="Drupal Tutorial"><img src="lib/images/twitter.png" alt="Drupal tutorial"></a></span>
+                           <span class="srch-icon"><a href="#" title="Drupal Tutorial"><img src="lib/images/youtube.png" alt="Drupal tutorial"></a></span>
+                        </div>
+                        <h6>The largest <em>Tutorials Library</em> on the web</h6>
+                  </div>
+               </div>
+            </div>
+            </div>
+        </header>
+        
+<!-- ARTICLE -->
+        <article>
+            <div class="container">
+                <div class="topic-cards">
+                    <div class="tab-content">
+                    <ul class="cards featured-cards ud-courseimpressiontracker inline-blocks-lg tac-force-lg">
+                            
+                            <li class="fn-force-lg m10-force-lg">
+                            <a href="#" class="mh290-force-xs">
+                            <span class="card-img" style="background-image: url(lib/images/images0.jpg)">
+                            <span class="fxdc card-info tac">
+                            <i class="icon" style="background-image: url(lib/images/images-icon.png)"></i>
+                            <span class="title mt10" style="text-align: center;">ASP.NET Step by Step</span>
+                            </span>
+                            </span>
+                            </a>
+                            </li>
+                            <li class="fn-force-lg m10-force-lg">
+                            <a href="#" class="mh290-force-xs">
+
+                            <span class="card-img" style="background-image: url(lib/images/images1.jpg)">
+                            <span class="fxdc card-info tac">
+                            <i class="icon" style="background-image: url(lib/images/java-icon-png)"></i>
+                            <span class="title mt10">The Top Java Tutorials</span>
+                            </span>
+                            </span>
+
+                            </a>
+                            </li>
+                            <li class="fn-force-lg m10-force-lg">
+                            <a href="#" class="mh290-force-xs">
+
+                            <span class="card-img" style="background-image: url(lib/images/images2.jpg)">
+                            <span class="fxdc card-info tac">
+                            <i class="icon" style="background-image: url(lib/images/excel-icon.png)"></i>
+                            <span class="title mt10">Excel</span>
+                            </span>
+                            </span>
+                            </a>
+                            </li>
+                    </ul>
+                    </div>
+                    <!----- Tutorials Library -->
+                    <hr>
+                    <div style="margin-top: 20px;">
+                        <div>
+                        <h1 class="thick-heading">|| Tutorials Library ||</h1>
+                        <h4 class="center myh4library" style="font-size:20px; position:relative;">Free Online Tutorials &amp; Courses</h4>
+                        </div>
+                        <div class="container" style="margin-top: 25px;">
+                        <div class="row">
+
+                        <div class="col-md-3 featured-box">
+                            <div style="border-bottom: 3px solid #527c5f !important;border-radius: 2%;">
+                            <h4>Java Technologies</h4>
+                            <ul class="menu" id="java_technologies">
+                            <li><a  href="#" title="">Hibernate</a></li>
+                            <li><a  href="#" title="">Spring MVC</a></li>
+                            <li><a  href="#" title="">Spring core</a></li>
+                            <li><a  href="#" title="">Struts2</a></li>
+                            <li><a  href="#" title="">Struts1</a></li>
+                            <li><a  href="#" title="">MongoDB</a></li>
+                            <li><a  href="#" title="">Spring Core</a></li>
+                            </ul>
+                            <h4>.NET Technologies</h4>
+                            <ul class="menu" id="java_technologies">
+                            <li><a  href="#" title="">LINQ</a></li>
+                            <li><a  href="#" title="">Entity Frameword</a></li>
+                            <li><a  href="#" title="">ADO.NET</a></li>
+                            <li><a  href="#" title="">AJAX</a></li>
+                            <li><a  href="#" title="">ẠngularJS</a></li>
+                            <li><a  href="#" title="">NodeJs</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 featured-box">
+                            <div style="border-bottom: 3px solid #527c5f !important;border-radius: 2%;">
+                            <h4>Java Technologies</h4>
+                            <ul class="menu" id="java_technologies">
+                            <li><a  href="#" title="">Hibernate</a></li>
+                            <li><a  href="#" title="">Spring MVC</a></li>
+                            <li><a  href="#" title="">Spring core</a></li>
+                            <li><a  href="#" title="">Struts2</a></li>
+                            <li><a  href="#" title="">Struts1</a></li>
+                            <li><a  href="#" title="">MongoDB</a></li>
+                            <li><a  href="#" title="">Spring Core</a></li>
+                            </ul>
+                            <h4>.NET Technologies</h4>
+                            <ul class="menu" id="java_technologies">
+                            <li><a  href="#" title="">LINQ</a></li>
+                            <li><a  href="#" title="">Entity Frameword</a></li>
+                            <li><a  href="#" title="">ADO.NET</a></li>
+                            <li><a  href="#" title="">AJAX</a></li>
+                            <li><a  href="#" title="">ẠngularJS</a></li>
+                            <li><a  href="#" title="">NodeJs</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+<!-- New----------->
+                    <div>
+                    <div>
+                    <hr>
+                    <h1 class="thick-heading"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+&nbsp;&nbsp;News </h1>
+                    <h4 class="center myh4library" style="font-size:20px; position:relative;">The news about Technologies Tutorials &amp; Courses</h4>
+                    </div>
+                    <ul class="cards ud-courseimpressiontracker inline-blocks-lg tac-force-lg">
+                        <li data-courseid="362328" class="fn-force-lg m10-force-lg">
+                        <a href="#" class="fxdc mh290-force-xs">
+                        <span class="course-thumb">
+                        <img src="lib/images/java-logo.png" alt="">
+                        </span>
+                        <span class="card-info fx fxdc">
+                        <span class="title">
+                            Java basic - Lập trình hướng đối tượng - 2016 
+                        </span>
+                        <span class="by fx fs14-xs">
+                        By Phạm An Bình
+                        </span>
+
+                        <span class="card-details fxac dib-lg">
+                        <i class="icon-group stud-icon"></i>
+                        <span class="stud-count fx fs13 mr15">
+                            132 người đã xem
+                        </span>
+                        <span class="price">
+                            <div class="ui small star rating"></div>
+                        </span>
+                        <script>
+                            $('.ui.rating')
+                                .rating({initialRating: 3});
+                        </script>
+                        </span>
+                        </span>
+                        </a>
+                        </li>
+                        
+                        <li data-courseid="362328" class="fn-force-lg m10-force-lg">
+                        <a href="#" class="fxdc mh290-force-xs">
+                        <span class="course-thumb">
+                            <img src="lib/images/conthoi.png" alt="" >
+                        </span>
+                        <span class="card-info fx fxdc">
+                        <span class="title">
+                            Vụ nổ tàu con thoi Columbia: 13 năm nhìn lại
+                        </span>
+                        <span class="by fx fs14-xs">
+                        By Phạm An Bình
+                        </span>
+
+                        <span class="card-details fxac dib-lg">
+                        <i class="icon-group stud-icon"></i>
+                        <span class="stud-count fx fs13 mr15">
+                            132 người đã xem
+                        </span>
+                        <span class="price">
+                            <div class="ui small star rating"></div>
+                        </span>
+                        <script>
+                            $('.ui.rating')
+                                .rating({initialRating: 3});
+                        </script>
+                        </span>
+                        </span>
+                        </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div> 
+            </div>
+        </article>
+        
+<!-- MODAL -->
+        <div class="ui small modal" style="top: 0px;">
+		<i class="close icon"></i>
+		<div class="header">
+			Login
+                        <div class="pull-right">
+                            <a onclick="closeModal()"><i class="close icon"></i></a>
+                        </div>
+		</div>
+                
+		<div class="content">
+
+			<div class="ui negative message">
+				<i class="close icon"></i>
+				<div class="header">
+				We're sorry we can't apply that discount
+				</div>
+				<p>That offer has expired
+				</p>
+			</div>
+
+			<form class="ui form">
+			<div class="ui stacked segment">
+			<div class="field">
+			<div class="ui left icon input">
+			<i class="user icon"></i>
+			<input type="text" name="email" placeholder="E-mail address">
+			</div>
+			</div>
+			<div class="field">
+			<div class="ui left icon input">
+			<i class="lock icon"></i>
+			<input type="password" name="password" placeholder="Password">
+			</div>
+			</div>
+			<div class="ui checkbox">
+			  <input name="example" type="checkbox">
+			  <label>Ghi nho</label>
+			</div>
+			<div class="ui fluid large teal submit button" style="margin-top: 20px;">Login</div>
+			</div>
+			
+
+			</form>
+
+			<div class="ui message">
+			New to us? <a href="#">Sign Up</a>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui button">
+				Cancel
+			</div>
+		</div>
+	</div>
+        
+<!-- FOOTER -->
+        <footer style="margin-top: 120px;">
+            <footer>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6 footerleft ">
+                      <div class="logofooter"> Logo</div>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                      <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -        110085, INDIA</p>
+                      <p><i class="fa fa-phone"></i> Phone (VN) : +91 9999 878 398</p>
+                      <p><i class="fa fa-envelope"></i> E-mail : khamphacntt.com.vn</p>
+
+                    </div>
+                    <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                      <h6 class="heading7">GENERAL LINKS</h6>
+                      <ul class="footer-ul">
+                        <li><a href="#"> Career</a></li>
+                        <li><a href="#"> Privacy Policy</a></li>
+                        <li><a href="#"> Terms & Conditions</a></li>
+                        <li><a href="#"> Client Gateway</a></li>
+                        <li><a href="#"> Ranking</a></li>
+                        <li><a href="#"> Case Studies</a></li>
+                        <li><a href="#"> Frequently Ask Questions</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                      <h6 class="heading7">QUESTIONS</h6>
+                      <div class="post">
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                        <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                      <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <div class="fb-xfbml-parse-ignore">
+                          <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+              <!--footer start from here-->
+
+              <div class="copyright">
+                <div class="container">
+                  <div class="col-md-6">
+                    <p>© 2016 - All Rights with khamphacntt</p>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="bottom_ul">
+                      <li><a href="#">khamphacntt.com.vn</a></li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Faq's</a></li>
+                      <li><a href="#">Contact us</a></li>
+                      <li><a href="#">Site Map</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </footer>
+         <!----------------javascript-------->
+        <script src="lib/js/myjavascript.js" type="text/javascript"></script>
+    </body>
+    
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            .active{
+                border: solid 1px;
+                padding: 10px;
+                color: #ff0000;width: 30%;
+            }
+        </style>
+        <h1 id="conbv">KÌA CÒN BƯỚM VÀNG</h1>
+        <input type="text" id="id-textbox" value=""/> <br/>
+        <input type="button" id="id-button" value="Bấm1"/>
+        <input type="button" id="id-button2" value="Bấm2" name="btn2"/>
+        <script language="javascript">
+            $('#id-button').click(function (){
+                alert($('#id-textbox').val());//click vào btn thì xuất hiện giá trị id-textbox
+            });
+            $(document).ready(function (){
+                alert("hihihi");
+                // Khi gặp những đoạn code nằm trong sự kiện này thì trình biên dịch sẽ 
+                // bỏ qua và cho tới khi trang web load xong, và nó sẽ duyệt lại
+                //  từ trên xuống dưới và thực thi những đoạn code bên trong nó
+            })
+            $('#id-button').click(function (){
+                $('#conbv').addClass('active');//thêm class active vào thẻ
+                //$('h1').removeClass('active'); xóa class active khỏi thẻ
+            })
+            $('#id-button2').click(function (){
+                var name = $('#id-button2').attr('name');//gán giá trị cho name là name của id-button2
+                $('#id-button2').attr('type' , 'text');//thêm/chuyển type cho id-button2 là text
+                $('#id-button').removeAttr('value');//xóa thuộc tính
+            })
+        </script>
+        <!--bỏ thẻ lên trên script nếu không thì sẽ lỗi vì không tìm thấy thẻ-->
+    </body>
+</html>
